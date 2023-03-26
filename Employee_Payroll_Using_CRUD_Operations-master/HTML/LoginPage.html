@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="\CSS\logincss.css">
+
+
+</head>
+
+<body>
+    <h1>Login Page</h1>
+    <header>
+        <h2>Admin Login:</h2>
+        <div>
+            <input type="text" id="admin-username" placeholder="username" required>
+        </div>
+        <div>
+            <input type="password" id="admin-password" placeholder="password" required>
+        </div>
+        <div>
+            <input type="submit" id="admin-login" value="Log In" onclick="adminSubmit()">
+        </div>
+    </header>
+    
+    <header>
+        <h2>User Login:</h2>
+        <div>
+            <input type="text" id="user-username" placeholder="username" required>
+        </div>
+        <div>
+            <input type="password" id="user-password" placeholder="password" required>
+        </div>
+        <div>
+            <input type="submit" id="user-login" value="Log In" onclick="userSubmit()">
+        </div>
+    </header>
+
+    <script>
+        function adminSubmit() {
+            // Perform admin login validation here
+            const adminUsername = document.getElementById("admin-username").value;
+            const adminPassword = document.getElementById("admin-password").value;
+            alert("Admin login submitted.");
+            // Perform admin login validation here
+            if (adminUsername === "admin" && adminPassword === "password123") {
+                alert("Admin login successful.");
+                window.location.assign("Home.html");
+            } else {
+                alert("Admin login failed. Please check your username and password.");
+            }
+
+            
+        }
+
+        function userSubmit() {
+            // Perform user login validation here
+            const userUsername = document.getElementById("user-username").value;
+            const userPassword = document.getElementById("user-password").value;
+            alert("User login submitted.");
+            // Perform user login validation here
+            if (userUsername === "user" && userPassword === "123456") {
+                alert("User login successful.");
+            } else {
+                alert("User login failed. Please check your username and password.");
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
